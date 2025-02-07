@@ -20,8 +20,15 @@ class Cookbook
   private
 
   def load_csv
+    CSV.foreach(@csv_file) do |row|
+      @recipes << Recipe.new(row[0], row[1])
+    end
   end
 
   def save_csv
+    CSV.open(@csv_file, 'wb') do |csv|
+      @recipes.each do |recipe|
+        csv << [recipe.name, recipe.description]
+      end
   end
 end
