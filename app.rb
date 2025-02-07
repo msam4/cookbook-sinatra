@@ -7,7 +7,9 @@ require_relative "recipe"
 
 # Index goes in here
 get "/" do
-  # List all recipes here
+  cookbook = Cookbook.new(File.join(__dir__, "recipes.csv"))
+  @recipes = cookbook.all
+  erb :index
 end
 
 # Create a new recipe here

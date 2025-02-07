@@ -35,5 +35,6 @@ class Cookbook
       @recipes.each do |recipe|
         csv << [recipe.name, recipe.description]
       end
+    end
   end
 end
