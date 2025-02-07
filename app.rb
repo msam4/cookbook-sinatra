@@ -4,23 +4,13 @@ require "pry-byebug"
 
 # Index goes in here
 get "/" do
-  @usernames = ["ssaunier", "Papillard"]
-  erb :index
+  # List all recipes here
 end
 
-get "/about" do
-  erb :about
+# Create a new recipe here
+get "/new" do
+  # Create recipe here
 end
-
-get "/team/:username" do
-  puts params[:username]
-  "The username is #{params[:username]}"
-end
-
-# Add a create
-# get "/create" do
-#   # Create goes here
-# end
 
 # Add a destroy
 # get "/destroy" do
