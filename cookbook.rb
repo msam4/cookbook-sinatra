@@ -9,12 +9,17 @@ class Cookbook
   end
 
   def add(recipe)
+    @recipes << recipe
+    save_csv
   end
 
   def all
+    @recipes
   end
 
   def destroy(index)
+    @recipes.delete_at(index)
+    save_csv
   end
 
   private
