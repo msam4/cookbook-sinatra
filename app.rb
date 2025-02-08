@@ -25,6 +25,8 @@ post "/recipes" do
 end
 
 # Destroy a recipe
-get "/delete" do
-  # Destroy recipe here
+get "/recipes/:index" do
+  cookbook = Cookbook.new(File.join(__dir__, "recipes.csv"))
+  cookbook.destroy(params[:index].to_i)
+  redirect to "/"
 end
