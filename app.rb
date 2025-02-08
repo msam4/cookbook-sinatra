@@ -14,7 +14,14 @@ end
 
 # Create a new recipe here
 get "/new" do
-  # Create recipe here
+  erb :new
+end
+
+post "/recipes" do
+  cookbook = Cookbook.new(File.join(__dir__, "recipes.csv"))
+  recipe = Recipe.new(params[:name], params[:description])
+  cookbook.add(recipe)
+  redirect to "/"
 end
 
 # Destroy a recipe
