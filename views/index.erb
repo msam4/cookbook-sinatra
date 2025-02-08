@@ -8,11 +8,11 @@
       <div class="card-body">
         <h5 class="card-title"><%= recipe.name %></h5>
         <p class="card-text"><%= recipe.description %></p>
-        <a href="/recipes/<%= index %>" class="btn btn-danger">Delete</a>
+        <a href="/recipes/<%= index %>" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></a>
       </div>
     </div>
   <% end %>
 </div>
 
-<a href="/new" class="btn btn-primary m-3"> Add a new recipe</a>
+<a href="/new" class="btn btn-primary m-3"> Add a recipe</a>
 <a href="" class="btn btn-secondary m-3"> Import a recipe</a>
