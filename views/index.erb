@@ -2,9 +2,9 @@
 
 <p>You currently have in your cookbook:</p>
 
-<div>
+<div class="d-grid gap-3">
   <% @recipes.each_with_index do |recipe, index| %>
-    <div class="card" style="width: 18rem;">
+    <div class="card p-2 mx-auto" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title"><%= recipe.name %></h5>
         <p class="card-text"><%= recipe.description %></p>
@@ -14,4 +14,4 @@
   <% end %>
 </div>
 
-<a href="/new" class="btn btn-primary"> Add a new recipe</a>
+<a href="/new" class="btn btn-primary m-3"> Add a new recipe</a>
