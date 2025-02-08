@@ -2,10 +2,16 @@
 
 <p>You currently have in your cookbook:</p>
 
-<ul>
+<div>
   <% @recipes.each_with_index do |recipe, index| %>
-    <li><%= recipe.name %>: <%= recipe.description %> - <a href="/recipes/<%= index %>">Delete</a></li>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= recipe.name %></h5>
+        <p class="card-text"><%= recipe.description %></p>
+        <a href="/recipes/<%= index %>" class="btn btn-danger">Delete</a>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
 
-<a href="/new"> Add a new recipe</a>
+<a href="/new" class="btn btn-primary"> Add a new recipe</a>
