@@ -1,10 +1,10 @@
-<h1>Welcome to Your Cookbook</h1>
+<h1 class="text-center">Welcome to Your Cookbook</h1>
 
 <p>You currently have in your cookbook:</p>
 
 <ul>
   <% @recipes.each_with_index do |recipe, index| %>
-    <li><%= recipe.name %>: <%= recipe.description %> - <a href="/recipes/<%= index %>">Destroy</a></li>
+    <li><%= recipe.name %>: <%= recipe.description %> - <a href="/recipes/<%= index %>">Delete</a></li>
   <% end %>
 </ul>
 
