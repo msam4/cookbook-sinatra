@@ -1,25 +1,13 @@
 <h1>Add a New Recipe</h1>
 
-<%# <form action="/recipes" method="post">
-  <div class="form-floating mb-3">
-    <label for="name">Name</label>
-    <input type="text" name="name" class="form-control" placeholder="Tacos">
-  </div>
-  <div class="form-floating">
-    <label for="name">Description</label>
-    <input type="text" name="description" class="form-control" placeholder="Ground beef and diced tomatoes">
-  </div>
-  <button type="submit" class="btn btn-primary">Add to cookbook</button>
-</form> %>
-
 <form action="/recipes" method="post">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Name</label>
-    <input type="text" class="form-control" name="name">
+    <input type="text" class="form-control" name="name" placeholder="Tacos">
   </div>
   <div class="mb-3">
     <label for="name" class="form-label">Description</label>
-    <input type="text" name="description" class="form-control">
+    <input type="text" name="description" class="form-control" placeholder="Ground beef and diced tomatoes">
   </div>
   <button type="submit" class="btn btn-primary">Add to cookbook</button>
 </form>
