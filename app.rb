@@ -24,6 +24,22 @@ post "/recipes" do
   redirect to "/"
 end
 
+# Edit a recipe
+get "/recipes/:index" do
+  cookbook = Cookbook.new(File.join(__dir__, "recipes.csv"))
+  @recipe = cookbook.all[params[:index].to_i]
+
+  erb :edit
+end
+
+put "/recipes/:index" do
+  cookbook = Cookbook.new(File.join(__dir__, "recipes.csv"))
+  index = params[:index].to_i
+
+  cookbook.update(index, params[:name], params[:description])
+  redirect to "/"
+end
+
 # Destroy a recipe
 get "/recipes/:index" do
   cookbook = Cookbook.new(File.join(__dir__, "recipes.csv"))

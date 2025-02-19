@@ -17,6 +17,12 @@ class Cookbook
     @recipes
   end
 
+  def update(index, name, description)
+    @recipes[index].name = name
+    @recipes[index].description = description
+    save_csv
+  end
+
   def destroy(index)
     @recipes.delete_at(index)
     save_csv
