@@ -8,6 +8,7 @@
       <div class="card-body">
         <h5 class="card-title"><%= recipe.name %></h5>
         <p class="card-text"><%= recipe.description %></p>
+        <a href="/recipes/<%= index %>/edit" class="btn btn-light"><i class="fa-solid fa-pen-to-square"></i></a>
         <a href="/recipes/<%= index %>" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></a>
       </div>
     </div>
@@ -15,4 +16,4 @@
 </div>
 
 <a href="/new" class="btn btn-primary m-3"> Add a recipe</a>
-<a href="" class="btn btn-secondary m-3"> Import a recipe</a>
+<a href="" class="btn btn-link m-3"> Import a recipe</a>

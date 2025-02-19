@@ -1,0 +1,17 @@
+<h1>Edit Recipe</h1>
+
+<form action="/recipes/<%= @index %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input type="text" class="form-control" name="name" value="<%= @recipe.name %>">
+  </div>
+
+  <div class="mb-3">
+    <label for="name" class="form-label">Description</label>
+    <input type="text" name="description" class="form-control" value="<%= @recipe.description %>">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Update recipe</button>
+</form>
