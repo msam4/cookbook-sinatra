@@ -17,6 +17,11 @@ class Cookbook
     @recipes
   end
 
+  # Used the select method instead
+  def grab(index)
+    @recipes[index]
+  end
+
   def update(index, name, description)
     @recipes[index].name = name
     @recipes[index].description = description
